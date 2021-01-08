@@ -3,6 +3,8 @@ package com.pr.springbootconfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+// use 'ConfigurationProperties' to pull up some group of properties and when there's a need to get a bean
+// use 'Value' to pull up some property
 @Configuration // creates this as a bean
 // look up from the prefix 'db.'
 @ConfigurationProperties("db")
