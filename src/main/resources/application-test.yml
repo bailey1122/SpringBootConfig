@@ -1,0 +1,18 @@
+server:
+  port: 8094
+
+my:
+  greeting: smth
+  list:
+    values: One,Two,Three
+
+dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+
+db:
+  connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+  host: 129.0.0.1
+  port: 2400
+
+#get all endpoints. Expose everything
+management.endpoints.web.exposure.include: "*"
+
