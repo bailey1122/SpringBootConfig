@@ -9,7 +9,7 @@ my:
 dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
 
 db:
-  connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+  connection: test-connection-string-here
   host: 129.0.0.1
   port: 2400
 

@@ -1,12 +1,13 @@
 server:
    port: 8094
 
+dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+
 my:
+   #it will be overridden by whatever is in the config server
    greeting: smth
    list:
       values: One,Two,Three
-
-dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
 
 db:
    connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
@@ -16,4 +17,8 @@ db:
 #get all endpoints. Expose everything
 management.endpoints.web.exposure.include: "*"
 
-spring.profiles.active: test
+#spring.profiles.active: test
+
+#url where the config server is running. The application is gonna connect to the spring
+#cloud config server using this URL and it's gonna pull up all properties
+sping.cloud.config.uri: http://localhost:8888/
