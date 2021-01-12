@@ -1,18 +1,22 @@
 server:
    port: 8094
 
-dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+app:
+   name: My app
+   description: Welcome to ${app.name}
+
+#dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
 
 my:
    #it will be overridden by whatever is in the config server
-   greeting: smth
+   greeting: hi
    list:
       values: One,Two,Three
 
-db:
-   connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
-   host: 127.0.0.1
-   port: 1200
+#db:
+#   connection: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+#   host: 127.0.0.1
+#   port: 1200
 
 #get all endpoints. Expose everything
 management.endpoints.web.exposure.include: "*"
@@ -20,5 +24,9 @@ management.endpoints.web.exposure.include: "*"
 #spring.profiles.active: test
 
 #url where the config server is running. The application is gonna connect to the spring
-#cloud config server using this URL and it's gonna pull up all properties
+#cloud config server using this URL and it's gonna pull up all properties.
+#Centralized, externalized, and consistent configuration. Different values for the URI in
+#different environments
 sping.cloud.config.uri: http://localhost:8888/
+
+spring.application.name: spring-boot-config

@@ -16,7 +16,7 @@ public class GreetingController {
     @Value("${my.greeting: default value}")
     private String greetingMessage;
 
-    @Value("some static message")
+    @Value(" some static message ")
     private String staticMessage;
 
     @Value("${my.list.values}")
