@@ -5,7 +5,7 @@ app:
    name: My app
    description: Welcome to ${app.name}
 
-#dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
+dbValues: "{connectionString: 'http://__', userName: 'foo', password: 'pass'}"
 
 my:
    #it will be overridden by whatever is in the config server
